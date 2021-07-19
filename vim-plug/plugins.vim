@@ -27,4 +27,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-commentary'
     " Auto-Complete
     Plug 'hrsh7th/nvim-compe'
+    " Markdown Preview
+    Plug 'npxbr/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
 call plug#end()
