@@ -1,7 +1,7 @@
 [![Neovim](https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-300x87.png)](https://neovim.io)
 
-[![Linux](https://img.shields.io/badge/Linux-Ubuntu-critical)]
-[![nvim](https://img.shields.io/static/v1?label=Neovim&message=v0.5.0&color=brightgreen)]
+![Linux](https://img.shields.io/badge/Linux-Ubuntu-critical)
+![nvim](https://img.shields.io/static/v1?label=Neovim&message=v0.5.0&color=brightgreen)
 
 Custom Neovim v0.5.0 configuration for quick setup.
 

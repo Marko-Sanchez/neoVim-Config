@@ -14,6 +14,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'scrooloose/NERDTree'
     " Colorscheme
     Plug 'junegunn/seoul256.vim'
+    Plug 'folke/tokyonight.nvim'
     " Statusline
     Plug 'itchyny/lightline.vim'
     " Git stuff
@@ -29,4 +30,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'hrsh7th/nvim-compe'
     " Markdown Preview
     Plug 'npxbr/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
+    " Tresitter
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 call plug#end()

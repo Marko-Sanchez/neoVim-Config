@@ -18,12 +18,12 @@ require'compe'.setup {
     path = true;
     buffer = true;
     calc = true;
-    vsnip = true;
-    nvim_lsp = true;
+    vsnip = false;
+    nvim_lsp = false;
     nvim_lua = true;
     spell = true;
     tags = true;
-    snippets_nvim = true;
+    snippets_nvim = false;
     treesitter = true;
   };
 }
@@ -46,8 +46,6 @@ end
 _G.tab_complete = function()
   if vim.fn.pumvisible() == 1 then
     return t "<C-n>"
-  elseif vim.fn.call("vsnip#available", {1}) == 1 then
-    return t "<Plug>(vsnip-expand-or-jump)"
   elseif check_back_space() then
     return t "<Tab>"
   else
