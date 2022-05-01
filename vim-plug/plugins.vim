@@ -27,6 +27,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
 
+    " nvim-tree
+    Plug 'kyazdani42/nvim-tree.lua'
 
     " Start page
     Plug 'mhinz/vim-startify'
