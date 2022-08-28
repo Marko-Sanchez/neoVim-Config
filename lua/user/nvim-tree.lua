@@ -1,25 +1,25 @@
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
-vim.g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "",
-    staged = "S",
-    unmerged = "",
-    renamed = "➜",
-    deleted = "",
-    untracked = "U",
-    ignored = "◌",
-  },
-  folder = {
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-  },
-}
+-- vim.g.nvim_tree_icons = {
+--   default = "",
+--   symlink = "",
+--   git = {
+--     unstaged = "",
+--     staged = "S",
+--     unmerged = "",
+--     renamed = "➜",
+--     deleted = "",
+--     untracked = "U",
+--     ignored = "◌",
+--   },
+--   folder = {
+--     default = "",
+--     open = "",
+--     empty = "",
+--     empty_open = "",
+--     symlink = "",
+--   },
+-- }
 
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
@@ -67,11 +67,7 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
       custom_only = false,
       list = {
         -- user mappings go here
-        { key = "e", cb = tree_cb "edit" },
-        { key = {"<CR>", "o"}, cb = tree_cb "tabnew"},
-        { key = "p", cb =tree_cb "preview"},
         { key = "h", cb = tree_cb "close_node" },
-        { key = "v", cb = tree_cb "vsplit" },
         { key = "Q", cd = tree_cb "collapse_all"},
       },
     },
@@ -87,6 +83,26 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
     },
     icons = {
       webdev_colors = true,
+      glyphs = {
+              default = "",
+              symlink = "",
+              git = {
+                unstaged = "",
+                staged = "S",
+                unmerged = "",
+                renamed = "➜",
+                deleted = "",
+                untracked = "U",
+                ignored = "◌",
+              },
+              folder = {
+                default = "",
+                open = "",
+                empty = "",
+                empty_open = "",
+                symlink = "",
+              },
+          },
     },
   },
   hijack_directories = {
@@ -94,8 +110,8 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
     auto_open = true,
   },
   update_focused_file = {
-    enable = false,
-    update_cwd = false,
+    enable = true,
+    update_cwd = true,
     ignore_list = {},
   },
   ignore_ft_on_setup = {

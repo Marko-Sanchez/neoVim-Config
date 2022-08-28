@@ -1,7 +1,5 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
-
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
@@ -44,3 +42,17 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
+
+-- Trouble Mappings
+keymap("n", "<leader>t", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
+keymap("n", "<leader>tq", "<cmd>TroubleToggle quickfix<cr>", opts)
+keymap("n", "<leader>tr", "<cmd>TroubleToggle lsp_references<cr>", opts)
+keymap("n", "<leader>td", "<cmd>TroubleToggle lsp_definitions<cr>", opts)
+
+-- NvimTree Mappings
+keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", opts)
+
+-- Telescope Mappings
+keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ preview = true }))<cr>", opts)
+keymap("n", "<leader>fd", "<cmd>lua require'telescope.builtin'.diagnostics(require('telescope.themes').get_dropdown({ preview = true }))<cr>", opts)
+keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)

@@ -7,10 +7,6 @@ telescope.load_extension('media_files')
 
 local actions = require "telescope.actions"
 
--- Shorten function name
-local keymap = vim.api.nvim_set_keymap
-local opts = {noremap = true, silent = true}
-
 telescope.setup {
   defaults = {
 
@@ -31,10 +27,12 @@ telescope.setup {
         ["<Down>"] = actions.move_selection_next,
         ["<Up>"] = actions.move_selection_previous,
 
-        ["<CR>"] = actions.select_default,
+        -- ["<CR>"] = actions.select_default,
+        -- ["<C-t>"] = actions.select_tab,
+        ["<S-CR>"] = actions.select_default,
+        ["<CR>"] = actions.select_tab,
         ["<C-x>"] = actions.select_horizontal,
         ["<C-v>"] = actions.select_vertical,
-        ["<C-t>"] = actions.select_tab,
 
         ["<C-u>"] = actions.preview_scrolling_up,
         ["<C-d>"] = actions.preview_scrolling_down,
@@ -106,7 +104,3 @@ telescope.setup {
     -- please take a look at the readme of the extension you want to configure
   },
 }
-
-keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ preview = true }))<cr>", opts)
-keymap("n", "<leader>fd", "<cmd>lua require'telescope.builtin'.diagnostics(require('telescope.themes').get_dropdown({ preview = true }))<cr>", opts)
-keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)

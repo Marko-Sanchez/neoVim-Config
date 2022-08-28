@@ -5,10 +5,6 @@ end
 
 require'nvim-web-devicons'.get_icons()
 
--- Shorten function name
-local keymap = vim.api.nvim_set_keymap
-local opts = {noremap = true, silent = true}
-
 trouble.setup{
     position = "bottom", -- position of the list can be: bottom, top, left, right
     height = 10, -- height of the trouble list when position is top or bottom
@@ -60,8 +56,3 @@ trouble.setup{
 
     use_diagnostic_signs = false -- enabling this will use the signs defined in your lsp client
 }
-
-keymap("n", "<leader>t", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
-keymap("n", "<leader>tq", "<cmd>TroubleToggle quickfix<cr>", opts)
-keymap("n", "<leader>tr", "<cmd>TroubleToggle lsp_references<cr>", opts)
-keymap("n", "<leader>td", "<cmd>TroubleToggle lsp_definitions<cr>", opts)

@@ -7,6 +7,8 @@ require "user.material"
 -- require "user.gruvbox"
 -- require "user.monokai"
 
+require "user.lualine"
+
 require "user.lsp"
 require "user.nvim-tree"
 require "user.gitsigns"
