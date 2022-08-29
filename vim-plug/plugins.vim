@@ -1,12 +1,21 @@
-" auto-install vim-plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
-  "autocmd VimEnter * PlugInstall | source $MYVIMRC
+let data_dir = has('nvim') ? stdpath('data') . '/site' : 'nvim'
+
+if has('unix') && empty(glob(data_dir . '/autoload/plug.vim'))
+    echo "Running on a Unix Machine, installing vim plug"
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+
+elseif has('win32') && empty(glob(data_dir . '/autoload/plug.vim'))
+    echo "Running on a Windows Machine, installing vim plug"
+    iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+
 endif
 
-call plug#begin('~/.config/nvim/autoload/plugged')
+let pluginPath = stdpath('config') . '/autoload/plugged'
+call plug#begin(pluginPath)
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
@@ -19,7 +28,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'marko-cerovac/material.nvim'
 
     " Statusline
-    Plug 'itchyny/lightline.vim'
+    Plug 'nvim-lualine/lualine.nvim'
 
     " Git stuff
     Plug 'lewis6991/gitsigns.nvim'
@@ -46,11 +55,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'hrsh7th/cmp-path' " path completions
     Plug 'hrsh7th/cmp-cmdline' " cmdline completions
 
+    " Snippets
+    Plug 'saadparwaiz1/cmp_luasnip'
+    Plug 'L3MON4D3/LuaSnip'
+    Plug 'rafamadriz/friendly-snippets'
+
     " Markdown Preview
-    Plug 'npxbr/glow.nvim', {'do': ':GlowInstall', 'branch': 'main'}
+    Plug 'npxbr/glow.nvim'
 
     " Tresitter
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+    Plug 'nvim-treesitter/nvim-treesitter'
 
     " LSP
     Plug 'neovim/nvim-lspconfig'

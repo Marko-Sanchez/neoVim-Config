@@ -23,6 +23,7 @@ Project Layout
     ├─ vim-plug/        Plugin Installaion
     ├─ autoload/        Vim-plug folder
     │  ├─ plugged/      Contains plugin files
+    │─ luaSetup.lua     Lua Source files, sourced into 'init.vim'
     └─ init.vim         Source all files from plug-config/ into init.vim
 
 Installaion and Guide
@@ -39,7 +40,9 @@ This Installaion uses Neovim v0.7.2, installed via appImage; Using the fallowing
 5. echo "alias nvim="~/appimage/nvim.appimage"" >> ~/.bashrc
 
 
-Note: On Windows download the Zip file, extract, and set the 'nvim.exe' path in Enviroment Variables.
+### Steps for Windows
+On Windows download the Zip file, extract, and set the 'nvim.exe' path in Enviroment Variables.
+Instructions from [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim#windows) page.
 
 Run `:checkhealth` you will want python2 & python3 support incase some future package might need it.
 The guide used to configure neovim was fallowed from [ChrisAtMachine](https://www.youtube.com/c/ChrisAtMachine/videos).
