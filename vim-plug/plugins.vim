@@ -1,20 +1,32 @@
-let data_dir = has('nvim') ? stdpath('data') . '/site' : 'nvim'
+" Check if user has nvim, if they don't ask them to download it first
+if !has('nvim')
+    echo "Download neovim first, before config installation"
+    finish
+endif
+
+let data_dir = stdpath('config')
 
 if has('unix') && empty(glob(data_dir . '/autoload/plug.vim'))
     echo "Running on a Unix Machine, installing vim plug"
+
     sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 
-elseif has('win32') && empty(glob(data_dir . '/autoload/plug.vim'))
+elseif has('win32') && empty(glob(data_dir . '\autoload\plug.vim'))
     echo "Running on a Windows Machine, installing vim plug"
-    iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
-    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
+
+    silent !powershell -Command "
+            \ New-Item -Path '$env:LOCALAPPDATA\nvim\' -Name autoload -Type Directory -Force;
+            \ Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+            \ "
+
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 
 endif
 
-let pluginPath = stdpath('config') . '/autoload/plugged'
+let pluginPath = stdpath('config') . (has('unix')? '/autoload/plugged': '\autoload\plugged')
 call plug#begin(pluginPath)
 
     " Better Syntax Support

@@ -1,10 +1,16 @@
-" General Stuff source $HOME/.config/nvim/general/paths.vim
-source $HOME/.config/nvim/general/settings.vim
+let $homepath = stdpath('config')
 
-" Plug
-source $HOME/.config/nvim/vim-plug/plugins.vim
+if has('unix')
 
-" Plug Configs
-source $HOME/.config/nvim/plug-config/start-screen.vim
+    source $homepath/general/settings.vim
+    source $homepath/vim-plug/plugins.vim
+    source $homepath/plug-config/start-screen.vim
+    source $homepath/luaSetup.lua
 
-luafile $HOME/.config/nvim/luaSetup.lua
+elseif has('win32')
+
+    source $homepath\general\settings.vim
+    source $homepath\vim-plug\plugins.vim
+    source $homepath\plug-config\start-screen.vim
+    source $homepath\luaSetup.lua
+endif

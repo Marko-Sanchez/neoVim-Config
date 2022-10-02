@@ -4,10 +4,6 @@ if not status_ok then
   return
 end
 
--- Shorten function name
-local keymap = vim.api.nvim_set_keymap
-local opts = {noremap = true, silent = true}
-
 gitsigns.setup {
   signs = {
     add = { hl = "GitSignsAdd", text = " ▎", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
@@ -52,6 +48,3 @@ gitsigns.setup {
   },
 }
 
-keymap("n", "<leader>hs", "<cmd>Gitsigns stage_hunk<CR>", opts)
-keymap("n", "<leader>hr", "<cmd>Gitsigns reset_hunk<CR>", opts)
-keymap("n", "<leader>hh", "<cmd>Gitsigns toggle_linehl<CR>", opts)
