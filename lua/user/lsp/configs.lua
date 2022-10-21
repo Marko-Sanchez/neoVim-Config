@@ -5,7 +5,7 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "pyright", "clangd", "sumneko_lua" }
+local servers = { "pyright", "clangd", "sumneko_lua", "gopls"}
 
 lsp_installer.setup({
     ensure_installed = servers

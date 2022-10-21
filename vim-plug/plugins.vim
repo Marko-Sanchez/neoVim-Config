@@ -36,7 +36,7 @@ call plug#begin(pluginPath)
     Plug 'ellisonleao/gruvbox.nvim'
     Plug 'folke/tokyonight.nvim'
     Plug 'tanvirtin/monokai.nvim'
-    Plug 'shaunsingh/nord.nvim'
+    Plug 'shaunsingh/nord.nvim', {'commit': '78f5f001709b5b321a35dcdc44549ef93185e024'}
     Plug 'marko-cerovac/material.nvim'
 
     " Statusline
