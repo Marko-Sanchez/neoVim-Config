@@ -36,7 +36,7 @@ call plug#begin(pluginPath)
     Plug 'ellisonleao/gruvbox.nvim'
     Plug 'folke/tokyonight.nvim'
     Plug 'tanvirtin/monokai.nvim'
-    Plug 'shaunsingh/nord.nvim', {'commit': '78f5f001709b5b321a35dcdc44549ef93185e024'}
+    Plug 'shaunsingh/nord.nvim'
     Plug 'marko-cerovac/material.nvim'
 
     " Statusline
@@ -71,9 +71,6 @@ call plug#begin(pluginPath)
     Plug 'saadparwaiz1/cmp_luasnip'
     Plug 'L3MON4D3/LuaSnip'
     Plug 'rafamadriz/friendly-snippets'
-
-    " Markdown Preview
-    Plug 'npxbr/glow.nvim'
 
     " Tresitter
     Plug 'nvim-treesitter/nvim-treesitter'

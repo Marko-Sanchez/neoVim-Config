@@ -1,11 +1,11 @@
 require "user.mappings"
-require "user.treesitter"
+-- require "user.treesitter"
 
--- require "user.material"
--- require "user.tokyonight"
+require "user.material"
+require "user.tokyonight"
 require "user.nord"
--- require "user.gruvbox"
--- require "user.monokai"
+require "user.gruvbox"
+require "user.monokai"
 
 require "user.lualine"
 

@@ -53,9 +53,10 @@ keymap("n", "<leader>td", "<cmd>TroubleToggle lsp_definitions<cr>", opts)
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", opts)
 
 -- Telescope Mappings
-keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ preview = true }))<cr>", opts)
 keymap("n", "<leader>fd", "<cmd>lua require'telescope.builtin'.diagnostics(require('telescope.themes').get_dropdown({ preview = true }))<cr>", opts)
+keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ preview = true }))<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 
 -- Gitsigns mappings
 keymap("n", "<leader>g[", "<cmd>Gitsigns prev_hunk<CR>", opts)
