@@ -1,4 +1,7 @@
+require("nvim-treesitter.install").prefer_git = true
+
 require'nvim-treesitter.configs'.setup {
+  prefer_git = true,
   highlight = {
     enable = true,              -- false will disable the whole extension
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.

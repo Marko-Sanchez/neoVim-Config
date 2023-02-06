@@ -1,6 +1,6 @@
 " set leader key
 let g:mapleader = ","
-let g:python3_host_prog = "/usr/bin/python3.8"
+let g:python3_host_prog = "/usr/bin/python3"
 
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers

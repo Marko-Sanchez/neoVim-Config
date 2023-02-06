@@ -1,5 +1,5 @@
 require "user.mappings"
--- require "user.treesitter"
+require "user.treesitter"
 
 require "user.material"
 require "user.tokyonight"
