@@ -43,6 +43,11 @@ keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
+-- Lsp mappings
+keymap("n", "<leader>tn", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
+keymap("n", "<leader>ts", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
+keymap("n", "<leader>th", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
+
 -- Trouble Mappings
 keymap("n", "<leader>t", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
 keymap("n", "<leader>tq", "<cmd>TroubleToggle quickfix<cr>", opts)
@@ -53,9 +58,10 @@ keymap("n", "<leader>td", "<cmd>TroubleToggle lsp_definitions<cr>", opts)
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", opts)
 
 -- Telescope Mappings
-keymap("n", "<leader>fd", "<cmd>lua require'telescope.builtin'.diagnostics(require('telescope.themes').get_dropdown({ preview = true }))<cr>", opts)
-keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ preview = true }))<cr>", opts)
-keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>fd", "<cmd>Telescope diagnostics theme=dropdown<cr>", opts)
+keymap("n", "<leader>ff", "<cmd>Telescope find_files theme=dropdown<cr>", opts)
+keymap("n", "<leader>fg", "<cmd>Telescope live_grep theme=dropdown<cr>", opts)
+keymap("n", "<leader>fc", "<cmd>Telescope colorscheme theme=dropdown<cr>", opts)
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 
 -- Gitsigns mappings

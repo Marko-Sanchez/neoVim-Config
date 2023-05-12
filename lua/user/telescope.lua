@@ -87,6 +87,9 @@ telescope.setup {
     --   picker_config_key = value,
     --   ...
     -- }
+    colorscheme = {
+      enable_preview = true
+    }
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
   },
@@ -95,7 +98,6 @@ telescope.setup {
         -- filetypes whitelist
         -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
         filetypes = {"png", "webp", "jpg", "jpeg"},
-        find_cmd = "rg" -- find command (defaults to `fd`)
       }
     -- Your extension configuration goes here:
     -- extension_name = {
