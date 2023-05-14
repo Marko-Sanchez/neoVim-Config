@@ -67,11 +67,6 @@ call plug#begin(pluginPath)
     Plug 'hrsh7th/cmp-path' " path completions
     Plug 'hrsh7th/cmp-cmdline' " cmdline completions
 
-    " Snippets
-    Plug 'saadparwaiz1/cmp_luasnip'
-    Plug 'L3MON4D3/LuaSnip'
-    Plug 'rafamadriz/friendly-snippets'
-
     " Tresitter
     Plug 'nvim-treesitter/nvim-treesitter'
 

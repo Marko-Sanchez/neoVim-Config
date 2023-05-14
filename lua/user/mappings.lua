@@ -59,10 +59,9 @@ keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", opts)
 
 -- Telescope Mappings
 keymap("n", "<leader>fd", "<cmd>Telescope diagnostics theme=dropdown<cr>", opts)
-keymap("n", "<leader>ff", "<cmd>Telescope find_files theme=dropdown<cr>", opts)
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep theme=dropdown<cr>", opts)
 keymap("n", "<leader>fc", "<cmd>Telescope colorscheme theme=dropdown<cr>", opts)
-keymap("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 
 -- Gitsigns mappings
 keymap("n", "<leader>g[", "<cmd>Gitsigns prev_hunk<CR>", opts)

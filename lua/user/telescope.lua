@@ -35,7 +35,7 @@ telescope.setup {
         ["<C-v>"] = actions.select_vertical,
 
         ["<C-u>"] = actions.preview_scrolling_up,
-        ["<C-d>"] = actions.preview_scrolling_down,
+        ["<C-i>"] = actions.preview_scrolling_down,
 
         ["<PageUp>"] = actions.results_scrolling_up,
         ["<PageDown>"] = actions.results_scrolling_down,
@@ -88,7 +88,8 @@ telescope.setup {
     --   ...
     -- }
     colorscheme = {
-      enable_preview = true
+      enable_preview = true,
+      previewer = false
     }
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
