@@ -61,11 +61,15 @@ call plug#begin(pluginPath)
     " Auto pairs
     Plug 'windwp/nvim-autopairs'
 
+    " Snippets
+    Plug 'saadparwaiz1/cmp_luasnip'
+    Plug 'L3MON4D3/LuaSnip'
+
     " Auto-Complete
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/nvim-cmp'
-    Plug 'hrsh7th/cmp-buffer' " buffer completions
-    Plug 'hrsh7th/cmp-path' " path completions
+    Plug 'hrsh7th/cmp-buffer'  " buffer completions
+    Plug 'hrsh7th/cmp-path'    " path completions
     Plug 'hrsh7th/cmp-cmdline' " cmdline completions
 
     " Tresitter
