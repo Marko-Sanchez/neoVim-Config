@@ -41,6 +41,7 @@ call plug#begin(pluginPath)
 
     " Statusline
     Plug 'nvim-lualine/lualine.nvim'
+    Plug 'kdheepak/tabline.nvim'
 
     " Git stuff
     Plug 'lewis6991/gitsigns.nvim'

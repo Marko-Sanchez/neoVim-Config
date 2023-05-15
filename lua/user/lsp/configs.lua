@@ -5,7 +5,11 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "pyright", "clangd", "gopls", "powershell_es", "jsonls"}
+local servers = {"pyright", "clangd", "gopls", "jsonls"}
+if vim.fn.has("win32") == 1 then
+    print("Adding powershell since where on a windows machine")
+    table.insert(servers, "powershell_es")
+end
 
 lsp_installer.setup({
     ensure_installed = servers

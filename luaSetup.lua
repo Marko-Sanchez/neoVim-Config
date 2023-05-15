@@ -8,6 +8,9 @@ require "user.tokyonight"
 -- require "user.monokai"
 
 require "user.lualine"
+-- require "user.evil-lualine"
+-- require "user.bubble-lualine"
+require "user.tabline"
 
 require "user.lsp"
 require "user.nvim-tree"
