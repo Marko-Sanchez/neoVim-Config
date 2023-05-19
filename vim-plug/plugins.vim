@@ -41,7 +41,6 @@ call plug#begin(pluginPath)
 
     " Statusline
     Plug 'nvim-lualine/lualine.nvim'
-    Plug 'kdheepak/tabline.nvim'
 
     " Git stuff
     Plug 'lewis6991/gitsigns.nvim'
@@ -74,6 +73,8 @@ call plug#begin(pluginPath)
 
     " Tresitter
     Plug 'nvim-treesitter/nvim-treesitter'
+
+    Plug 'github/copilot.vim'
 
     " LSP
     Plug 'neovim/nvim-lspconfig'
