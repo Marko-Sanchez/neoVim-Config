@@ -89,7 +89,11 @@ telescope.setup {
     -- }
     colorscheme = {
       enable_preview = true,
-      previewer = false
+      mappings = {
+        i = {
+          ["<CR>"] = actions.select_default,
+        }
+      }
     }
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
