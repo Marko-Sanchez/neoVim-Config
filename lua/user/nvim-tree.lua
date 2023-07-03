@@ -36,14 +36,6 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
     number = false,
     relativenumber = false,
     signcolumn = "yes",
-    mappings = {
-      custom_only = false,
-      list = {
-        -- user mappings go here
-        { key = "h", cb = tree_cb "close_node" },
-        { key = "Q", cd = tree_cb "collapse_all"},
-      },
-    },
   },
   renderer = {
     indent_markers = {
