@@ -44,8 +44,5 @@ require('material').setup({
 })
 
 --Lua:
-vim.g.material_style = "deep ocean"
-
---Lua:
 vim.api.nvim_set_keymap('n', '<leader>mm', [[<Cmd>lua require('material.functions').toggle_style()<CR>]], { noremap = true, silent = true })
--- vim.cmd 'colorscheme material'
+vim.cmd 'colorscheme material'

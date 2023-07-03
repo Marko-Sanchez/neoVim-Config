@@ -1,4 +1,3 @@
-" Check if user has nvim, if they don't ask them to download it first
 if !has('nvim')
     echo "Download neovim first, before config installation"
     finish
@@ -36,8 +35,12 @@ call plug#begin(pluginPath)
     Plug 'ellisonleao/gruvbox.nvim'
     Plug 'folke/tokyonight.nvim'
     Plug 'tanvirtin/monokai.nvim'
-    Plug 'shaunsingh/nord.nvim'
     Plug 'marko-cerovac/material.nvim'
+    Plug 'sainnhe/everforest'
+    Plug 'marko-sanchez/california.nvim'
+
+    Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'rktjmp/lush.nvim'
 
     " Statusline
     Plug 'nvim-lualine/lualine.nvim'

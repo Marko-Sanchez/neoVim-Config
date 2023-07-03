@@ -26,11 +26,13 @@ end
 require "user.mappings"
 require "user.treesitter"
 
--- require "user.material"
-require "user.tokyonight"
--- require "user.nord"
+-- require "user.colorschemes.material"
+require "user.colorschemes.everforest"
+-- require "user.tokyonight"
 -- require "user.gruvbox"
 -- require "user.monokai"
+
+require "user.colorizer"
 
 require "user.lualine"
 -- require "user.evil-lualine"
