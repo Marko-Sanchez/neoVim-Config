@@ -8,8 +8,10 @@ let data_dir = stdpath('config')
 if has('unix') && empty(glob(data_dir . '/autoload/plug.vim'))
     echo "Running on a Unix Machine, installing vim plug"
 
-    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    !mkdir -p data_dir . '/autoload'
+    let plug_path = data_dir . '/autoload/plug.vim'
+    let cmd = '!curl -fLo ' .plug_path. ' --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    execute cmd
 
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 
@@ -81,7 +83,7 @@ call plug#begin(pluginPath)
 
     " LSP
     Plug 'neovim/nvim-lspconfig'
-    Plug 'williamboman/nvim-lsp-installer'
+    Plug 'williamboman/mason.nvim'
 
     " Telescope
     Plug 'nvim-lua/popup.nvim'
