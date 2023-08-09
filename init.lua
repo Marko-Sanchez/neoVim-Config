@@ -38,10 +38,12 @@ require "user.lualine"
 -- require "user.evil-lualine"
 -- require "user.bubble-lualine"
 
+require "user.copilot"
+
 require "user.lsp"
 require "user.nvim-tree"
 require "user.gitsigns"
--- require "user.cmp"
+require "user.cmp"
 require "user.autopairs"
 
 require "user.telescope"
