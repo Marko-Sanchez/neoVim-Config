@@ -64,8 +64,8 @@ keymap("n", "<leader>fg", "<cmd>Telescope live_grep theme=dropdown<cr>", opts)
 keymap("n", "<leader>fc", "<cmd>Telescope colorscheme theme=dropdown<cr>", opts)
 
 -- Gitsigns mappings
-keymap("n", "<leader>g[", "<cmd>Gitsigns prev_hunk<CR>", opts)
-keymap("n", "<leader>g]", "<cmd>Gitsigns next_hunk<CR>", opts)
-keymap("n", "<leader>gr", "<cmd>Gitsigns preview_hunk<CR>", opts)
-keymap("n", "<leader>gl", "<cmd>Gitsigns toggle_signs<CR>", opts)
-keymap("n", "<leader>gb", "<cmd>Gitsigns toggle_current_line_blame<CR>", opts)
+keymap("n", "<leader>hm", "<cmd>Gitsigns prev_hunk<CR>", opts)
+keymap("n", "<leader>hn", "<cmd>Gitsigns next_hunk<CR>", opts)
+keymap("n", "<leader>hh", "<cmd>Gitsigns preview_hunk<CR>", opts)
+keymap("n", "<leader>hl", "<cmd>Gitsigns toggle_signs<CR>", opts)
+keymap("n", "<leader>hb", "<cmd>Gitsigns toggle_current_line_blame<CR>", opts)

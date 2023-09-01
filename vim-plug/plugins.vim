@@ -54,7 +54,8 @@ call plug#begin(pluginPath)
     Plug 'junegunn/gv.vim'
 
     " nvim-tree
-    Plug 'kyazdani42/nvim-tree.lua'
+    Plug 'nvim-tree/nvim-web-devicons'
+    Plug 'nvim-tree/nvim-tree.lua'
 
     " Start page
     Plug 'mhinz/vim-startify'
@@ -78,11 +79,14 @@ call plug#begin(pluginPath)
 
     " Tresitter
     Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'nvim-tree/nvim-web-devicons'
 
+    " Co-pilot
     Plug 'github/copilot.vim'
 
     " LSP
     Plug 'neovim/nvim-lspconfig'
+    Plug 'williamboman/mason-lspconfig.nvim'
     Plug 'williamboman/mason.nvim'
 
     " Telescope
@@ -92,6 +96,5 @@ call plug#begin(pluginPath)
     Plug 'nvim-telescope/telescope-media-files.nvim'
 
     Plug 'folke/trouble.nvim'
-    Plug 'kyazdani42/nvim-web-devicons'
 
 call plug#end()

@@ -1,25 +1,21 @@
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
+  print("Failed to load nvim-tree")
   return
 end
-
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
-  return
-end
-local tree_cb = nvim_tree_config.nvim_tree_callback
 
 vim.g.lua_tree_show_icons = {
     git = 1,
     folders = 1,
     files = 1,
     folder_arrows = 1,
-    tree_width = 40,
+    tree_width = 50,
 
 }
+
 -- setup with all defaults
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
-require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
+require("nvim-tree").setup ({ -- BEGIN_DEFAULT_OPTS
   auto_reload_on_write = true,
   disable_netrw = true,
   hijack_cursor = false,
@@ -139,6 +135,6 @@ require'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
       profile = false,
     },
   },
-} -- END_DEFAULT_OPTS
+}) -- END_DEFAULT_OPTS
 
 vim.cmd [[autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif]]

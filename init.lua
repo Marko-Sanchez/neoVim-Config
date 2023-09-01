@@ -3,6 +3,8 @@ local is_windows = vim.fn.has("win32") == 1
 
 -- grab path to nvim config
 local config_path = vim.fn.stdpath("config")
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 if is_windows then
   print("Windows")
