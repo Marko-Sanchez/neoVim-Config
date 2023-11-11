@@ -23,7 +23,6 @@ Project Layout
     ├── lua          lua files containing plugin configurations
     │   └── user
     │       └── lsp  lsp config files
-    ├── plug-config  vim files containing plugin configurations
     └── vim-plug     vim-plug installation source
 
 Installation and Guide

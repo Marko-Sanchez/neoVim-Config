@@ -12,7 +12,6 @@ if is_windows then
 
   vim.cmd("source " .. config_path .. "general\\settings.vim")
   vim.cmd("source " .. config_path .. "vim-plug\\plugins.vim")
-  vim.cmd("source " .. config_path .. "plug-config\\start-screen.vim")
 
 else
   print("Linux/Unix")
@@ -20,10 +19,10 @@ else
 
   vim.cmd("source " .. config_path .. "general/settings.vim")
   vim.cmd("source " .. config_path .. "vim-plug/plugins.vim")
-  vim.cmd("source " .. config_path .. "plug-config/start-screen.vim")
 
 end
 
+require "user.startify"
 require "user.mappings"
 require "user.treesitter"
 

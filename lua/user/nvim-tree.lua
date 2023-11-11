@@ -25,8 +25,7 @@ require("nvim-tree").setup ({ -- BEGIN_DEFAULT_OPTS
   sort_by = "name",
   update_cwd = false,
   view = {
-    width = 30,
-    hide_root_folder = false,
+    width = 40,
     side = "left",
     preserve_window_proportions = false,
     number = false,
@@ -35,10 +34,12 @@ require("nvim-tree").setup ({ -- BEGIN_DEFAULT_OPTS
   },
   renderer = {
     indent_markers = {
-      enable = false,
+      enable = true,
       icons = {
         corner = "└ ",
         edge = "│ ",
+        item = "│",
+        bottom = "─",
         none = "  ",
       },
     },
