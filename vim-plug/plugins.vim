@@ -39,7 +39,7 @@ call plug#begin(pluginPath)
     Plug 'tanvirtin/monokai.nvim'
     Plug 'marko-cerovac/material.nvim'
     Plug 'sainnhe/everforest'
-    Plug 'marko-sanchez/california.nvim'
+    " Plug 'marko-sanchez/california.nvim'
 
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'rktjmp/lush.nvim'

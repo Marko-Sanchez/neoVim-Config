@@ -22,7 +22,6 @@ else
   vim.cmd("source " .. config_path .. "vim-plug/plugins.vim")
   vim.cmd("source " .. config_path .. "plug-config/start-screen.vim")
 
-
 end
 
 require "user.mappings"
