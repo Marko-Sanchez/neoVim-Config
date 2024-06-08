@@ -3,7 +3,7 @@
 ![Linux](https://img.shields.io/badge/Linux-Ubuntu-critical)
 ![nvim](https://img.shields.io/static/v1?label=Neovim&message=v0.8.2&color=darkgreen)
 
-Custom Neovim v0.8.2 configuration for quick setup.
+Custom Neovim v0.10.0 configuration for quick setup.
 
 Features
 --------
