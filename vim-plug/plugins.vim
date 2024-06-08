@@ -60,9 +60,6 @@ call plug#begin(pluginPath)
     " Start page
     Plug 'mhinz/vim-startify'
 
-    " Commenter
-    Plug 'tpope/vim-commentary'
-
     " Auto pairs
     Plug 'windwp/nvim-autopairs'
 
