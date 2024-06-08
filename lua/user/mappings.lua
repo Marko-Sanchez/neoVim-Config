@@ -44,9 +44,10 @@ keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Lsp mappings
-keymap("n", "<leader>tn", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-keymap("n", "<leader>ts", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
-keymap("n", "<leader>th", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
+keymap("n", "<leader>ln", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
+keymap("n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
+keymap("n", "<leader>lh", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
+keymap("n", "<leader>ll", "<cmd>lua vim.lsp.inlay_hints(not vim.lsp.inlay_hint.is_enabled())<cr>", opts)
 
 -- Trouble Mappings
 keymap("n", "<leader>t", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
