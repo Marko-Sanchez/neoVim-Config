@@ -2,6 +2,9 @@ require("nvim-treesitter.install").prefer_git = true
 
 require'nvim-treesitter.configs'.setup {
   prefer_git = true,
+  indent = {
+    enable = true
+  },
   ensure_installed = {
     "bash",
     "c",
@@ -10,6 +13,7 @@ require'nvim-treesitter.configs'.setup {
     "lua",
     "python",
     "vim",
+    "vimdoc",
     "yaml",
     "json",
   },
