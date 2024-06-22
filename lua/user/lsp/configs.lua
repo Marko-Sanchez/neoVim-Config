@@ -5,7 +5,7 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = {"pyright", "clangd", "gopls", "jsonls"}
+local servers = {"pyright", "clangd", "gopls", "jsonls", "lua_ls"}
 if vim.fn.has("win32") == 1 then
     table.insert(servers, "powershell_es")
 end
