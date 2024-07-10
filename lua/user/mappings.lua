@@ -50,10 +50,10 @@ keymap("n", "<leader>lh", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
 keymap("n", "<leader>ll", "<cmd>lua vim.lsp.inlay_hints(not vim.lsp.inlay_hint.is_enabled())<cr>", opts)
 
 -- Trouble Mappings
-keymap("n", "<leader>t", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
-keymap("n", "<leader>tq", "<cmd>TroubleToggle quickfix<cr>", opts)
-keymap("n", "<leader>tr", "<cmd>TroubleToggle lsp_references<cr>", opts)
-keymap("n", "<leader>td", "<cmd>TroubleToggle lsp_definitions<cr>", opts)
+keymap("n", "<leader>t", "<cmd>Trouble diagnostics toggle mydiagnostics<cr>", opts)
+keymap("n", "<leader>tq", "<cmd>Trouble quickfix toggle<cr>", opts)
+keymap("n", "<leader>tr", "<cmd>Trouble lsp_references toggle<cr>", opts)
+keymap("n", "<leader>td", "<cmd>Trouble lsp_definitions toggle<cr>", opts)
 
 -- NvimTree Mappings
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", opts)
