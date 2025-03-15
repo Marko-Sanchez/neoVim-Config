@@ -26,19 +26,16 @@ require "user.startify"
 require "user.mappings"
 require "user.treesitter"
 
-require "user.colorschemes.material"
--- require "user.colorschemes.everforest"
--- require "user.tokyonight"
--- require "user.gruvbox"
--- require "user.monokai"
+require "user.colorschemes.current_scheme"
 
 require "user.colorizer"
 
 require "user.lualine"
+-- require "user.california-lualine"
 -- require "user.evil-lualine"
 -- require "user.bubble-lualine"
 
-require "user.copilot"
+-- require "user.copilot"
 
 require "user.lsp"
 require "user.nvim-tree"

@@ -6,6 +6,7 @@ end
 telescope.load_extension('media_files')
 
 local actions = require "telescope.actions"
+local actions_state = require "telescope.actions.state"
 
 telescope.setup {
   defaults = {
@@ -82,32 +83,31 @@ telescope.setup {
     },
   },
   pickers = {
-    -- Default configuration for builtin pickers goes here:
-    -- picker_name = {
-    --   picker_config_key = value,
-    --   ...
-    -- }
     colorscheme = {
       enable_preview = true,
       mappings = {
         i = {
-          ["<CR>"] = actions.select_default,
+          ["<CR>"] = function(prompt_bufnr)
+            local scheme = actions_state.get_selected_entry(prompt_bufnr)[1]
+            require("user.colorschemes.schemepicker").setScheme(scheme)
+            actions.close(prompt_bufnr)
+            vim.cmd("colorscheme "..scheme)
+          end
+        },
+        n = {
+          ["<CR>"] = function(prompt_bufnr)
+            local scheme = actions_state.get_selected_entry(prompt_bufnr)[1]
+            require("user.colorschemes.schemepicker").setScheme(scheme)
+            actions.close(prompt_bufnr)
+            vim.cmd("colorscheme "..scheme)
+          end
         }
       }
     }
-    -- Now the picker_config_key will be applied every time you call this
-    -- builtin picker
   },
   extensions = {
     media_files = {
-        -- filetypes whitelist
-        -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
         filetypes = {"png", "webp", "jpg", "jpeg"},
       }
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
   },
 }
