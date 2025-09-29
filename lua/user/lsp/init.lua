@@ -1,9 +1,5 @@
-local status_ok, _ = pcall(require, "lspconfig")
-if not status_ok then
-  return
-end
-
 require("mason").setup()
 
+-- Files, under 'user/lua/lsp/*', containing servers to install and their configuration.
 require "user.lsp.configs"
 require("user.lsp.handlers").setup()
