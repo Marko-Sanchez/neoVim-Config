@@ -3,8 +3,6 @@ if not status_ok then
     return
 end
 
-local lspconfig = require("lspconfig")
-
 local servers = {"pyright", "clangd", "gopls", "jsonls", "lua_ls"}
 if vim.fn.has("win32") == 1 then
     table.insert(servers, "powershell_es")
@@ -23,5 +21,7 @@ for _, server in pairs(servers) do
     if has_custom_opts then
          opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
     end
-    lspconfig[server].setup(opts)
+
+    vim.lsp.config(server, opts)
+    vim.lsp.enable(server)
 end
