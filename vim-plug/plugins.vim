@@ -32,6 +32,7 @@ call plug#begin(pluginPath)
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
+    Plug 'tpope/vim-commentary'
 
     " Colorscheme
     Plug 'ellisonleao/gruvbox.nvim'
@@ -39,6 +40,7 @@ call plug#begin(pluginPath)
     Plug 'tanvirtin/monokai.nvim'
     Plug 'marko-cerovac/material.nvim'
     Plug 'sainnhe/everforest'
+    Plug 'hiphish/rainbow-delimiters.nvim'
     " Plug 'marko-sanchez/california.nvim'
 
     Plug 'norcalli/nvim-colorizer.lua'
@@ -79,7 +81,7 @@ call plug#begin(pluginPath)
     Plug 'nvim-tree/nvim-web-devicons'
 
     " Co-pilot
-    Plug 'github/copilot.vim'
+    " Plug 'github/copilot.vim'
 
     " LSP
     Plug 'neovim/nvim-lspconfig'
