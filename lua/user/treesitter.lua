@@ -1,22 +1,26 @@
 require("nvim-treesitter.install").prefer_git = true
 
-require'nvim-treesitter.configs'.setup {
+require'nvim-treesitter'.setup {
   prefer_git = true,
   indent = {
     enable = true
   },
-  ensure_installed = {
-    "bash",
-    "c",
-    "cpp",
-    "go",
-    "lua",
-    "python",
-    "vim",
-    "vimdoc",
-    "yaml",
-    "json",
-  },
+  opts = {
+    ensure_installed = {
+      "bash",
+      "c",
+      "cpp",
+      "go",
+      "lua",
+      "python",
+      "vim",
+      "vimdoc",
+      "yaml",
+      "json",
+    },
+  },-- opts --
+  config = function (_, opts)
+  end,
   disable = function(lang, buf)
     local max_filesize = 100 * 1024 -- 100kb
     local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
