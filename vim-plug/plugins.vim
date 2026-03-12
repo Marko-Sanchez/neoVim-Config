@@ -41,7 +41,6 @@ call plug#begin(pluginPath)
     Plug 'marko-cerovac/material.nvim'
     Plug 'sainnhe/everforest'
     Plug 'hiphish/rainbow-delimiters.nvim'
-    " Plug 'marko-sanchez/california.nvim'
 
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'rktjmp/lush.nvim'

@@ -31,7 +31,6 @@ require "user.colorschemes.current_scheme"
 require "user.colorizer"
 
 require "user.lualine"
--- require "user.california-lualine"
 -- require "user.evil-lualine"
 -- require "user.bubble-lualine"
 
